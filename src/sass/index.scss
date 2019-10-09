@@ -1,0 +1,723 @@
+$txt-color: #1473cc;
+$bg-color: #7559e9;
+
+$browser-default-font-size: 75px !default;
+@function pr($px) {
+  @return $px / $browser-default-font-size * 1rem;
+}
+$padding-size:pr(24px);
+
+%one {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+%in-b {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+
+%clearfix {
+  zoom: 1;
+  &:after {
+    clear: both;
+  }
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+}
+
+/* 标题模块 */
+.title-lcm{
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #444444;
+  &:before{
+    @extend %in-b;
+    content: '';
+    width: 5px;
+    height: 24px;
+    background-image: linear-gradient(135deg,
+        #d65ccd 0%,
+        #975eee 100%),
+    linear-gradient(
+            #7559e9,
+            #7559e9);
+    background-blend-mode: normal,
+    normal;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-right: 18px;
+  }
+  span{
+    vertical-align: middle;
+  }
+  .lcm-area{
+    @extend %in-b;
+    background-image: linear-gradient(135deg,
+        #d65ccd 0%,
+        #975eee 100%),
+    linear-gradient(
+            #7559e9,
+            #7559e9);
+    background-blend-mode: normal,
+    normal;
+    border-radius: 10px 0px 10px 0px;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 0 9px;
+  }
+}
+
+
+/* 课程项目 */
+.kcxm{
+  width: 738px;
+  margin: 0 auto;
+  @extend %clearfix;
+  .kc-xm-bg{
+    width: 324px;
+    height: 239px;
+    float: left;
+    margin-right: 20px;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .kc-xm-cont{
+    width: 394px;
+    //border: 1px solid red;
+    float: left;
+    .cont-detail{
+      font-size: 14px;
+      line-height: 26px;
+      color: #666666;
+      .detail-title{
+        font-size: 18px;
+        color: #7559e9;
+        font-weight: bold;
+      }
+      .detail-more{
+        color: $bg-color;
+      }
+      .detail-btn{
+        text-align: center;
+        padding-top: 24px;
+        a{
+          @extend %in-b;
+          min-width: 110px;
+          height: 32px;
+          line-height: 32px;
+          background-color: #ffffff;
+          border-radius: 16px;
+          border: solid 1px #7559e9;
+          margin-right: 20px;
+          font-size: 14px;
+          color: $bg-color;
+          box-sizing: border-box;
+          &:last-child{
+            margin-right: 0;
+          }
+          &:hover, &.active{
+            background-image: linear-gradient(135deg,
+                #d65ccd 0%,
+                #7559e9 100%),
+            linear-gradient(
+                    #c6c6c6,
+                    #c6c6c6);
+            background-blend-mode: normal,
+            normal;
+            box-shadow: 0px 3px 5px 0px
+            rgba(143, 95, 243, 0.4);
+            color: #ffffff;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 学校优势 */
+.xxys{
+  width: 738px;
+  margin: 0 auto;
+  padding: 30px 0;
+  .xxys-cont{
+    text-align: center;
+    padding-top: 30px;
+    @extend %clearfix;
+    .cont-item{
+      float: left;
+      width: 33.33%;
+      //border: 1px solid red;
+      padding: 0 18px;
+      box-sizing: border-box;
+      .item-img{
+        width: 80px;
+        height: 80px;
+      }
+      .item-title{
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 26px;
+        color: #444444;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      .item-text{
+        font-size: 14px;
+        line-height: 26px;
+        color: #666666;
+      }
+    }
+  }
+}
+
+/* 招生说明 */
+.zssm{
+  width: 738px;
+  margin: 0 auto;
+  .zssm-cont{
+    background: url("../images/bg-color.png") repeat-y right;
+    margin-top: 30px;
+    padding: 20px 0 16px;
+    @extend %clearfix;
+    .cont-l{
+      width: 292px;
+      float: left;
+      margin-right: 30px;
+      .l-img{
+        width: 100%;
+        height: 230px;
+      }
+      .l-btn{
+        text-align: center;
+        padding-top: 20px;
+        a{
+          @extend %in-b;
+          min-width: 136px;
+          height: 42px;
+          line-height: 42px;
+          background-color: transparent;
+          border: solid 1px #7559e9;
+          margin-right: 16px;
+          font-size: 14px;
+          color: $bg-color;
+          box-sizing: border-box;
+          vertical-align: middle;
+          &:last-child{
+            margin-right: 0;
+          }
+          &:hover, &.active{
+            background-image: linear-gradient(135deg,
+                #d65ccd 0%,
+                #7559e9 100%),
+            linear-gradient(
+                    #c6c6c6,
+                    #c6c6c6);
+            background-blend-mode: normal,
+            normal;
+            box-shadow: 0px 3px 5px 0px
+            rgba(143, 95, 243, 0.4);
+            color: #ffffff;
+            border: none;
+          }
+        }
+      }
+    }
+    .cont-r{
+      width: 392px;
+      float: left;
+      .r-title{
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 26px;
+        color: #444444;
+      }
+      .r-row{
+        font-size: 14px;
+        padding-top: 16px;
+        .row-key{
+          @extend %in-b;
+          background-color: #7559e9;
+          border-radius: 13px;
+          height: 26px;
+          line-height: 26px;
+          padding: 0 14px;
+          color: #ffffff;
+        }
+        .row-val{
+          color: #666666;
+          padding-top: 6px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+/* 社会实践 */
+.shsj{
+  width: 738px;
+  margin: 0 auto;
+  .shsj-cont{
+    padding: 30px 0 20px;
+    @extend %clearfix;
+    .cont-item{
+      width: 230px;
+      float: left;
+      margin-right: 24px;
+      &:last-child{
+        margin-right: 0;
+      }
+      .item-img{
+        width: 100%;
+        height: 184px;
+        margin-bottom: 10px;
+      }
+      .item-text{
+        width: 100%;
+        font-size: 14px;
+        line-height: 26px;
+        color: #666666;
+      }
+    }
+  }
+}
+
+/* 国际交流 */
+.gjjl{
+  width: 738px;
+  margin: 0 auto;
+  .gjjl-text{
+    background-color: #e3defb;
+    border-radius: 16px 16px 0 0;
+    margin: 30px 20px 0;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 30px;
+    color: #666666;
+  }
+  .gjjl-cont{
+    background-color: #7559e9;
+    border-radius: 16px;
+    padding: 20px 20px 0;
+    margin-bottom: 30px;
+    @extend %clearfix;
+    .cont-item{
+      background-color: #ffffff;
+      padding: 10px;
+      float: left;
+      margin-bottom: 18px;
+      &:nth-of-type(odd){
+        margin-right: 18px;
+      }
+      img{
+        width: 320px;
+        height: 220px;
+      }
+    }
+  }
+}
+
+/* 课程优势 */
+.kcys{
+  width: 738px;
+  margin: 0 auto;
+  .kcys-cont{
+    padding: 50px 0 30px;
+    @extend %clearfix;
+    .cont-item{
+      float: left;
+      width: 146px;
+      height: 201px;
+      background-color: #7559e9;
+      border-radius: 6px;
+      padding: 47px 17px 30px;
+      box-sizing: border-box;
+      margin-top: 80px;
+      position: relative;
+      .item-serial{
+        position: absolute;
+        top: -20px;
+        left: 0;
+        width: 96px;
+        height: 37px;
+        line-height: 37px;
+        background-image: linear-gradient(135deg,
+            #f6601e 0%,
+            #ffb109 100%),
+        linear-gradient(
+                #d35ccf,
+                #d35ccf);
+        background-blend-mode: normal,
+        normal;
+        box-shadow: 0px 3px 5px 0px
+        rgba(216, 52, 97, 0.4);
+        border-radius: 16px 16px 16px 0px;
+
+        font-size: 30px;
+        color: #ffffff;
+        text-align: center;
+      }
+      .item-detail{
+        height: 100%;
+        line-height: 26px;
+        color: #ffffff;
+        .detail-title{
+          font-size: 16px;
+          font-weight: bold;
+          text-align: center;
+        }
+        .detail-text{
+          font-size: 14px;
+          opacity: 0.5;
+        }
+      }
+
+      &:nth-of-type(2){
+        background-color: #66b58d;
+        margin-top: 60px;
+        height: 221px;
+      }
+      &:nth-of-type(3){
+        background-color: #e95963;
+        margin-top: 40px;
+        height: 241px;
+      }
+      &:nth-of-type(4){
+        background-color: #f4862a;
+        margin-top: 20px;
+        height: 261px;
+      }
+      &:nth-of-type(5){
+        background-color: #3c95da;
+        margin-top: 0;
+        height: 281px;
+      }
+    }
+  }
+}
+
+/* 上海国际高中 */
+.shgjgz{
+  width: 738px;
+  margin: 0 auto;
+  .shgjgz-cont{
+    padding: 30px 0;
+    .cont-item{
+      .item-bg{
+        float: left;
+        margin-right: 20px;
+      }
+      .item-detail{
+        float: left;
+        width: 406px;
+        .detail-row{
+          font-size: 14px;
+          line-height: 24px;
+          .row-name{
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: bold;
+            color: #444444;
+            margin-right: 20px;
+          }
+          .row-area{
+            color: #888888;
+            padding-left: 20px;
+            background: url("../images/icon_1.png") no-repeat left;
+          }
+          .row-key{
+            color: #888888;
+            @extend %in-b;
+          }
+          .row-val{
+            @extend %in-b;
+            color: #444444;
+            span{
+              background-color: #76c0d7;
+              border-radius: 2px;
+              padding: 0 4px;
+              margin-right: 8px;
+              color: #ffffff;
+              &:nth-of-type(2){
+                background-color: #ffaf6d;
+              }
+              &:nth-of-type(3){
+                background-color: #f89383;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:750px) {
+  // 垂直居中，两端对齐
+  .space-between {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  // 垂直居中，水平居中
+  .space-around {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  // 去除前后伪类
+  %clearclass {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  /* 标题模块 */
+  .title-lcm{
+    font-size: pr(32px);
+    line-height: pr(32px);
+    &:before{
+      width: pr(5px);
+      height: pr(24px);
+      border-radius: pr(3px);
+      margin-right: pr(18px);
+    }
+    .lcm-area{
+      font-size: pr(22px);
+      line-height: pr(38px);
+      padding: 0 pr(14px);
+    }
+  }
+
+  /* 课程项目 */
+  .kcxm{
+    width: auto;
+    padding: 0 $padding-size;
+    .kc-xm-bg{
+      width: pr(324px);
+      height: pr(239px);
+      margin-right: pr(20px);
+    }
+    .kc-xm-cont{
+      width: auto;
+      float: none;
+      .cont-detail{
+        font-size: pr(26px);
+        line-height: pr(42px);
+        .detail-title{
+          font-size: initial;
+        }
+        .detail-btn{
+          padding-top: pr(24px);
+          @extend .space-between;
+          a{
+            margin-right: pr(20px);
+            height: pr(56px);
+            line-height: pr(56px);
+            font-size: pr(26px);
+            &:hover, &.active{
+              box-shadow: 0px pr(3px) pr(5px) 0px
+            }
+          }
+        }
+      }
+    }
+  }
+  /* 学校优势 */
+  .xxys{
+    width: auto;
+    padding: pr(30px) $padding-size;
+    .xxys-cont{
+      padding-top: pr(30px);
+      .cont-item{
+        padding: 0;
+        .item-img{
+          width: pr(80px);
+          height: pr(80px);
+        }
+        .item-title{
+          font-size: pr(26px);
+          line-height: pr(34px);
+          padding: pr(30px) 0 pr(18px);
+        }
+        .item-text{
+          font-size: pr(22px);
+          line-height: pr(42px);
+        }
+      }
+    }
+  }
+  /* 招生说明 */
+  .zssm{
+    width: auto;
+    padding: 0 $padding-size;
+    margin-bottom: pr(67px);
+    .zssm-cont{
+      margin-top: pr(23px);
+      padding: pr(30px) pr(30px) pr(50px);
+      background-size: 100% 100%;
+      position: relative;
+      .cont-l{
+        width: pr(292px);
+        margin-right: pr(30px);
+        .l-img{
+          height: pr(230px);
+        }
+        .l-btn{
+          position: absolute;
+          bottom: pr(-27px);
+          left: 0;
+          right: 0;
+          margin: auto;
+          a{
+            height: pr(56px);
+            line-height: pr(56px);
+            font-size: pr(24px);
+            border-radius: pr(28px);
+            margin-right: pr(20px);
+            background-color: #ffffff;
+          }
+        }
+      }
+      .cont-r{
+        width: auto;
+        float: none;
+        .r-title{
+          font-size: pr(26px);
+          line-height: pr(36px);
+        }
+        .r-row{
+          padding-top: pr(20px);
+          font-size: pr(26px);
+          .row-key{
+            height: pr(40px);
+            line-height: pr(40px);
+            padding: 0 pr(16px) 0 pr(17px);
+          }
+          .row-val{
+            font-size: pr(24px);
+            line-height: pr(36px);
+          }
+        }
+      }
+    }
+  }
+  /* 社会实践 */
+  .shsj{
+    width: auto;
+    padding: 0 $padding-size;
+    .shsj-cont{
+      padding-top: pr(27px);
+      @extend %clearclass;
+      @extend .space-between;
+      .cont-item{
+        width: pr(338px);
+        float: none;
+        margin-right: pr(26px);
+        .item-img{
+          height: pr(270px);
+          margin-bottom: pr(15px);
+        }
+        .item-text{
+          font-size: pr(22px);
+          line-height: pr(30px);
+        }
+      }
+    }
+  }
+  /* 国际交流 */
+  .gjjl{
+    width: auto;
+    padding: 0 $padding-size;
+    .gjjl-text{
+      border-radius: pr(16px) pr(16px) 0 0;
+      margin: pr(27px) pr(30px) 0;
+      padding: pr(30px);
+      font-size: pr(24px);
+      line-height: pr(36px);
+    }
+    .gjjl-cont{
+      border-radius: pr(16px);
+      padding: pr(18px) pr(18px) 0;
+      margin-bottom: pr(40px);
+      .cont-item{
+        padding: pr(10px);
+        margin-bottom: pr(18px);
+        &:nth-of-type(odd){
+          margin-right: pr(18px);
+        }
+        img{
+          width: pr(304px);
+          height: pr(209px);
+        }
+      }
+    }
+  }
+  /* 课程优势 */
+  .kcys{
+    width: auto;
+    padding: 0 $padding-size;
+    .kcys-cont{
+      padding-top: pr(50px);
+      .cont-item{
+        float: none;
+        width: 100%;
+        height: pr(150px);
+        border-radius: pr(6px);
+        padding: 0 pr(30px);
+        margin-top: 0;
+        margin-bottom: pr(20px);
+        .item-serial{
+          top: pr(-20px);
+          width: pr(96px);
+          height: pr(37px);
+          line-height: pr(37px);
+          font-size: pr(30px);
+        }
+        .item-detail{
+          @extend .space-between;
+          line-height: pr(36px);
+          .detail-title{
+            width: pr(156px);
+            font-size: pr(26px);
+            text-align: left;
+          }
+          .detail-text{
+            width: pr(436px);
+            font-size: pr(26px);
+            opacity: 0.7;
+          }
+        }
+        &:nth-of-type(2){
+          margin-top: 0;
+          height: pr(150px);
+        }
+        &:nth-of-type(3){
+          margin-top: 0;
+          height: pr(150px);
+        }
+        &:nth-of-type(4){
+          margin-top: 0;
+          height: pr(150px);
+        }
+        &:nth-of-type(5){
+          margin-top: 0;
+          height: pr(150px);
+        }
+      }
+    }
+  }
+}
