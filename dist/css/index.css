@@ -1,19 +1,25 @@
 @charset "UTF-8";
-.title-lcm:before, .title-lcm .lcm-area, .kcxm .kc-xm-cont .cont-detail .detail-btn a, .zssm .zssm-cont .cont-l .l-btn a, .zssm .zssm-cont .cont-r .r-row .row-key, .shgjgz .shgjgz-cont .cont-item .item-detail .detail-row .row-key, .shgjgz .shgjgz-cont .cont-item .item-detail .detail-row .row-val {
+.gjxx .gjxx-cont .cont-item .item-title, .rmgjxx .rmgjxx-cont .cont-item .item-detail .detail-title, .rmgjxx .rmgjxx-cont .cont-item .item-title, .gjss .gjss-cont .cont-item .item-title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.title-lcm:before, .title-lcm .lcm-area, .kcxm .kc-xm-cont .cont-detail .detail-btn a, .zssm .zssm-cont .cont-l .l-btn a, .zssm .zssm-cont .cont-r .r-row .row-key, .shgjgz .shgjgz-cont .cont-item .item-detail .detail-row .row-name, .shgjgz .shgjgz-cont .cont-item .item-detail .detail-row .row-key, .shgjgz .shgjgz-cont .cont-item .item-detail .detail-row .row-val, .shgjgz .shgjgz-cont .cont-item .item-btn a, .zsjz .zsjz-cont .cont-detail .detail-row .row-key, .zsjz .zsjz-cont .cont-detail .item-btn a, .gjss .gjss-cont .cont-item .item-btn, .gjss .gjss-degree .degree-item .item-title:before {
   display: inline-block;
   *zoom: 1;
   *display: inline;
 }
 
-.kcxm, .xxys .xxys-cont, .zssm .zssm-cont, .shsj .shsj-cont, .gjjl .gjjl-cont, .kcys .kcys-cont {
+.kcxm, .xxys .xxys-cont, .zssm .zssm-cont, .shsj .shsj-cont, .gjjl .gjjl-cont, .kcys .kcys-cont, .shgjgz .shgjgz-cont .cont-item, .zsjz .zsjz-cont, .gjxx .gjxx-cont, .gjxx .gjxx-cont .cont-item .item-enroll, .rmgjxx .rmgjxx-cont, .gjss .gjss-cont, .gjss .gjss-degree {
   zoom: 1;
 }
 
-.kcxm:after, .xxys .xxys-cont:after, .zssm .zssm-cont:after, .shsj .shsj-cont:after, .gjjl .gjjl-cont:after, .kcys .kcys-cont:after {
+.kcxm:after, .xxys .xxys-cont:after, .zssm .zssm-cont:after, .shsj .shsj-cont:after, .gjjl .gjjl-cont:after, .kcys .kcys-cont:after, .shgjgz .shgjgz-cont .cont-item:after, .zsjz .zsjz-cont:after, .gjxx .gjxx-cont:after, .gjxx .gjxx-cont .cont-item .item-enroll:after, .rmgjxx .rmgjxx-cont:after, .gjss .gjss-cont:after, .gjss .gjss-degree:after {
   clear: both;
 }
 
-.kcxm:before, .xxys .xxys-cont:before, .zssm .zssm-cont:before, .shsj .shsj-cont:before, .gjjl .gjjl-cont:before, .kcys .kcys-cont:before, .kcxm:after, .xxys .xxys-cont:after, .zssm .zssm-cont:after, .shsj .shsj-cont:after, .gjjl .gjjl-cont:after, .kcys .kcys-cont:after {
+.kcxm:before, .xxys .xxys-cont:before, .zssm .zssm-cont:before, .shsj .shsj-cont:before, .gjjl .gjjl-cont:before, .kcys .kcys-cont:before, .shgjgz .shgjgz-cont .cont-item:before, .zsjz .zsjz-cont:before, .gjxx .gjxx-cont:before, .gjxx .gjxx-cont .cont-item .item-enroll:before, .rmgjxx .rmgjxx-cont:before, .gjss .gjss-cont:before, .gjss .gjss-degree:before, .kcxm:after, .xxys .xxys-cont:after, .zssm .zssm-cont:after, .shsj .shsj-cont:after, .gjjl .gjjl-cont:after, .kcys .kcys-cont:after, .shgjgz .shgjgz-cont .cont-item:after, .zsjz .zsjz-cont:after, .gjxx .gjxx-cont:after, .gjxx .gjxx-cont .cont-item .item-enroll:after, .rmgjxx .rmgjxx-cont:after, .gjss .gjss-cont:after, .gjss .gjss-degree:after {
   content: "";
   display: table;
 }
@@ -50,12 +56,13 @@
   padding: 0 9px;
 }
 
-/* 课程项目 */
-.kcxm {
+/* 课程 容器 */
+.course-wrap {
   width: 738px;
   margin: 0 auto;
 }
 
+/* 课程项目 */
 .kcxm .kc-xm-bg {
   width: 324px;
   height: 239px;
@@ -123,8 +130,6 @@
 
 /* 学校优势 */
 .xxys {
-  width: 738px;
-  margin: 0 auto;
   padding: 30px 0;
 }
 
@@ -162,11 +167,6 @@
 }
 
 /* 招生说明 */
-.zssm {
-  width: 738px;
-  margin: 0 auto;
-}
-
 .zssm .zssm-cont {
   background: url("../images/bg-color.png") repeat-y right;
   margin-top: 30px;
@@ -249,11 +249,6 @@
 }
 
 /* 社会实践 */
-.shsj {
-  width: 738px;
-  margin: 0 auto;
-}
-
 .shsj .shsj-cont {
   padding: 30px 0 20px;
 }
@@ -282,16 +277,11 @@
 }
 
 /* 国际交流 */
-.gjjl {
-  width: 738px;
-  margin: 0 auto;
-}
-
 .gjjl .gjjl-text {
   background-color: #e3defb;
   border-radius: 16px 16px 0 0;
   margin: 30px 20px 0;
-  padding: 20px;
+  padding: 20px 28px;
   font-size: 16px;
   line-height: 30px;
   color: #666666;
@@ -321,18 +311,13 @@
 }
 
 /* 课程优势 */
-.kcys {
-  width: 738px;
-  margin: 0 auto;
-}
-
 .kcys .kcys-cont {
   padding: 50px 0 30px;
 }
 
 .kcys .kcys-cont .cont-item {
   float: left;
-  width: 146px;
+  width: 20%;
   height: 201px;
   background-color: #7559e9;
   border-radius: 6px;
@@ -402,18 +387,32 @@
 }
 
 /* 上海国际高中 */
-.shgjgz {
-  width: 738px;
-  margin: 0 auto;
-}
-
 .shgjgz .shgjgz-cont {
   padding: 30px 0;
 }
 
+.shgjgz .shgjgz-cont .cont-item {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.shgjgz .shgjgz-cont .cont-item:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
 .shgjgz .shgjgz-cont .cont-item .item-bg {
   float: left;
+  width: 300px;
+  height: 200px;
   margin-right: 20px;
+}
+
+.shgjgz .shgjgz-cont .cont-item .item-bg img {
+  width: 100%;
+  height: 100%;
 }
 
 .shgjgz .shgjgz-cont .cont-item .item-detail {
@@ -452,8 +451,12 @@
   background-color: #76c0d7;
   border-radius: 2px;
   padding: 0 4px;
-  margin-right: 8px;
   color: #ffffff;
+  margin-right: 8px;
+}
+
+.shgjgz .shgjgz-cont .cont-item .item-detail .detail-row .row-val span:last-child {
+  margin-right: 0;
 }
 
 .shgjgz .shgjgz-cont .cont-item .item-detail .detail-row .row-val span:nth-of-type(2) {
@@ -464,8 +467,353 @@
   background-color: #f89383;
 }
 
+.shgjgz .shgjgz-cont .cont-item .item-btn {
+  float: left;
+  padding-top: 10px;
+}
+
+.shgjgz .shgjgz-cont .cont-item .item-btn a {
+  min-width: 114px;
+  height: 32px;
+  line-height: 32px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: solid 1px #7559e9;
+  margin-right: 20px;
+  font-size: 14px;
+  color: #7559e9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.shgjgz .shgjgz-cont .cont-item .item-btn a:last-child {
+  margin-right: 0;
+}
+
+.shgjgz .shgjgz-cont .cont-item .item-btn a:hover, .shgjgz .shgjgz-cont .cont-item .item-btn a.active {
+  background-image: linear-gradient(135deg, #d65ccd 0%, #7559e9 100%), linear-gradient(#c6c6c6, #c6c6c6);
+  background-blend-mode: normal, normal;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(143, 95, 243, 0.4);
+          box-shadow: 0px 3px 5px 0px rgba(143, 95, 243, 0.4);
+  color: #ffffff;
+  border: none;
+}
+
+/* 上海校区招生简章 */
+.zsjz .zsjz-cont {
+  margin: 30px 0;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+.zsjz .zsjz-cont .cont-detail {
+  float: right;
+  width: 490px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(117, 89, 233, 0.32);
+          box-shadow: 0px 0px 20px 0px rgba(117, 89, 233, 0.32);
+  margin: 30px 0;
+  padding: 30px;
+}
+
+.zsjz .zsjz-cont .cont-detail .detail-row {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.zsjz .zsjz-cont .cont-detail .detail-row .row-key {
+  color: #888888;
+}
+
+.zsjz .zsjz-cont .cont-detail .detail-row .row-tuition {
+  color: #fd5300;
+}
+
+.zsjz .zsjz-cont .cont-detail .item-btn {
+  padding-top: 10px;
+}
+
+.zsjz .zsjz-cont .cont-detail .item-btn a {
+  min-width: 164px;
+  height: 32px;
+  line-height: 32px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: solid 1px #7559e9;
+  margin-right: 20px;
+  font-size: 14px;
+  color: #7559e9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.zsjz .zsjz-cont .cont-detail .item-btn a:last-child {
+  margin-right: 0;
+}
+
+.zsjz .zsjz-cont .cont-detail .item-btn a:hover, .zsjz .zsjz-cont .cont-detail .item-btn a.active {
+  background-image: linear-gradient(135deg, #d65ccd 0%, #7559e9 100%), linear-gradient(#c6c6c6, #c6c6c6);
+  background-blend-mode: normal, normal;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(143, 95, 243, 0.4);
+          box-shadow: 0px 3px 5px 0px rgba(143, 95, 243, 0.4);
+  color: #ffffff;
+  border: none;
+}
+
+/* 上海国际小学 */
+.gjxx .gjxx-cont {
+  padding: 30px 0;
+  margin-right: -24px;
+}
+
+.gjxx .gjxx-cont .cont-item {
+  width: 230px;
+  float: left;
+  margin-right: 24px;
+  margin-bottom: 30px;
+}
+
+.gjxx .gjxx-cont .cont-item img {
+  width: 100%;
+}
+
+.gjxx .gjxx-cont .cont-item .item-title {
+  background-color: #7559e9;
+  font-size: 16px;
+  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.gjxx .gjxx-cont .cont-item .item-text {
+  font-size: 14px;
+  line-height: 18px;
+  color: #666666;
+  padding: 13px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.gjxx .gjxx-cont .cont-item .item-enroll {
+  font-size: 14px;
+  line-height: 14px;
+  color: #888888;
+}
+
+.gjxx .gjxx-cont .cont-item .item-enroll .enroll-stage {
+  float: left;
+}
+
+.gjxx .gjxx-cont .cont-item .item-enroll .site {
+  float: right;
+  padding-left: 15px;
+  background: url("../images/icon_2.png") no-repeat left;
+}
+
+/* 热门国际学校 */
+.rmgjxx .rmgjxx-cont {
+  padding: 30px 0 0;
+  margin-right: -24px;
+}
+
+.rmgjxx .rmgjxx-cont .cont-item {
+  width: 230px;
+  float: left;
+  margin-right: 24px;
+  margin-bottom: 30px;
+}
+
+.rmgjxx .rmgjxx-cont .cont-item .item-detail {
+  position: relative;
+  height: 160px;
+}
+
+.rmgjxx .rmgjxx-cont .cont-item .item-detail img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.rmgjxx .rmgjxx-cont .cont-item .item-detail .detail-title {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  line-height: 32px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.rmgjxx .rmgjxx-cont .cont-item .item-title {
+  font-size: 16px;
+  line-height: 16px;
+  color: #444444;
+  padding: 12px 0;
+  text-align: center;
+}
+
+.rmgjxx .rmgjxx-cont .cont-item .item-stage {
+  font-size: 14px;
+  line-height: 18px;
+  color: #888888;
+  text-align: center;
+}
+
+/* 国际硕士学位班院校 */
+.gjss .gjss-cont {
+  padding: 30px 0 0;
+  margin-right: -24px;
+}
+
+.gjss .gjss-cont .cont-item {
+  width: 230px;
+  float: left;
+  margin-right: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.gjss .gjss-cont .cont-item img {
+  width: 100%;
+}
+
+.gjss .gjss-cont .cont-item .item-title {
+  font-size: 16px;
+  line-height: 16px;
+  color: #444444;
+  font-weight: bold;
+  padding: 12px 0;
+}
+
+.gjss .gjss-cont .cont-item .item-text {
+  font-size: 14px;
+  line-height: 18px;
+  color: #666666;
+}
+
+.gjss .gjss-cont .cont-item .item-text .in-class {
+  margin-right: 1em;
+}
+
+.gjss .gjss-cont .cont-item .item-btn {
+  width: 164px;
+  height: 32px;
+  line-height: 0.42667rem;
+  border: solid 1px #7559e9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 14px;
+  color: #7559e9;
+  margin-top: 12px;
+}
+
+.gjss .gjss-cont .cont-item .item-btn:hover {
+  background-color: #7559e9;
+  color: #ffffff;
+}
+
+.gjss .gjss-degree .degree-item {
+  width: 359px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.gjss .gjss-degree .degree-item:nth-of-type(2n) {
+  margin-right: 0;
+}
+
+.gjss .gjss-degree .degree-item:nth-of-type(2) .item-title {
+  background-color: #7559e9;
+}
+
+.gjss .gjss-degree .degree-item:nth-of-type(2) .item-title:before {
+  content: '02';
+}
+
+.gjss .gjss-degree .degree-item:nth-of-type(3) .item-title {
+  background-color: #3c95da;
+}
+
+.gjss .gjss-degree .degree-item:nth-of-type(3) .item-title:before {
+  content: '03';
+}
+
+.gjss .gjss-degree .degree-item:nth-of-type(4) .item-title {
+  background-color: #e95963;
+}
+
+.gjss .gjss-degree .degree-item:nth-of-type(4) .item-title:before {
+  content: '04';
+}
+
+.gjss .gjss-degree .degree-item .item-title {
+  height: 80px;
+  line-height: 80px;
+  background-color: #f4862a;
+  border-radius: 12px 12px 0px 0px;
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+  position: relative;
+}
+
+.gjss .gjss-degree .degree-item .item-title:before {
+  content: '01';
+  font-size: 72px;
+  font-weight: normal;
+  color: #ffffff;
+  opacity: 0.1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.gjss .gjss-degree .degree-item .item-detail {
+  padding: 20px 30px;
+  border-radius: 0 0 12px 12px;
+  border: 1px solid #e4e4e4;
+}
+
+.gjss .gjss-degree .degree-item .item-detail img {
+  width: 100%;
+}
+
+.gjss .gjss-degree .degree-item .item-detail .detail-text {
+  font-size: 14px;
+  line-height: 26px;
+  color: #666666;
+  padding: 14px 0 23px;
+}
+
+.gjss .gjss-degree .degree-item .item-detail .detail-btn {
+  display: block;
+  width: 100%;
+  height: 42px;
+  line-height: 42px;
+  background-image: linear-gradient(135deg, #ffa21d 0%, #f4862a 100%), linear-gradient(#7559e9, #7559e9);
+  background-blend-mode: normal, normal;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(244, 134, 42, 0.4);
+          box-shadow: 0px 3px 5px 0px rgba(244, 134, 42, 0.4);
+  border-radius: 21px;
+  text-align: center;
+  font-size: 16px;
+  color: #ffffff;
+}
+
 @media screen and (max-width: 750px) {
-  .space-between, .kcxm .kc-xm-cont .cont-detail .detail-btn, .shsj .shsj-cont, .kcys .kcys-cont .cont-item .item-detail {
+  .space-between, .kcxm .kc-xm-cont .cont-detail .detail-btn, .kcys .kcys-cont .cont-item .item-detail {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -490,9 +838,6 @@
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  .shsj .shsj-cont:before, .shsj .shsj-cont:after {
-    display: none;
-  }
   /* 标题模块 */
   .title-lcm {
     font-size: 0.42667rem;
@@ -509,9 +854,12 @@
     line-height: 0.50667rem;
     padding: 0 0.18667rem;
   }
+  /* 课程 容器 */
+  .course-wrap {
+    width: 100%;
+  }
   /* 课程项目 */
   .kcxm {
-    width: auto;
     padding: 0 0.32rem;
   }
   .kcxm .kc-xm-bg {
@@ -545,7 +893,6 @@
   }
   /* 学校优势 */
   .xxys {
-    width: auto;
     padding: 0.4rem 0.32rem;
   }
   .xxys .xxys-cont {
@@ -569,7 +916,6 @@
   }
   /* 招生说明 */
   .zssm {
-    width: auto;
     padding: 0 0.32rem;
     margin-bottom: 0.89333rem;
   }
@@ -624,7 +970,6 @@
   }
   /* 社会实践 */
   .shsj {
-    width: auto;
     padding: 0 0.32rem;
   }
   .shsj .shsj-cont {
@@ -632,8 +977,13 @@
   }
   .shsj .shsj-cont .cont-item {
     width: 4.50667rem;
-    float: none;
     margin-right: 0.34667rem;
+  }
+  .shsj .shsj-cont .cont-item:nth-of-type(2) {
+    margin-right: 0;
+  }
+  .shsj .shsj-cont .cont-item:last-child {
+    display: none;
   }
   .shsj .shsj-cont .cont-item .item-img {
     height: 3.6rem;
@@ -651,7 +1001,7 @@
   .gjjl .gjjl-text {
     border-radius: 0.21333rem 0.21333rem 0 0;
     margin: 0.36rem 0.4rem 0;
-    padding: 0.4rem;
+    padding: 0.26667rem 0.4rem;
     font-size: 0.32rem;
     line-height: 0.48rem;
   }
@@ -677,7 +1027,7 @@
     padding: 0 0.32rem;
   }
   .kcys .kcys-cont {
-    padding-top: 0.66667rem;
+    padding: 0.66667rem 0 0.53333rem;
   }
   .kcys .kcys-cont .cont-item {
     float: none;
@@ -687,6 +1037,9 @@
     padding: 0 0.4rem;
     margin-top: 0;
     margin-bottom: 0.26667rem;
+  }
+  .kcys .kcys-cont .cont-item:last-child {
+    margin-bottom: 0;
   }
   .kcys .kcys-cont .cont-item .item-serial {
     top: -0.26667rem;
@@ -723,5 +1076,233 @@
   .kcys .kcys-cont .cont-item:nth-of-type(5) {
     margin-top: 0;
     height: 2rem;
+  }
+  /* 上海国际高中 */
+  .shgjgz {
+    padding: 0 0.32rem;
+  }
+  .shgjgz .shgjgz-cont {
+    padding: 0.4rem 0;
+  }
+  .shgjgz .shgjgz-cont .cont-item {
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.4rem;
+  }
+  .shgjgz .shgjgz-cont .cont-item .item-bg {
+    width: 4rem;
+    height: 2.66667rem;
+    margin-right: 0.26667rem;
+  }
+  .shgjgz .shgjgz-cont .cont-item .item-detail {
+    width: 5.09333rem;
+    float: right;
+  }
+  .shgjgz .shgjgz-cont .cont-item .item-detail .detail-row {
+    font-size: 0.34667rem;
+    line-height: 0.48rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .shgjgz .shgjgz-cont .cont-item .item-detail .detail-row .row-name {
+    width: 3.41333rem;
+    font-size: 0.37333rem;
+    line-height: 0.48rem;
+    margin-right: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .shgjgz .shgjgz-cont .cont-item .item-detail .detail-row .row-area {
+    float: right;
+    font-size: 0.32rem;
+    padding-left: 0.34667rem;
+  }
+  .shgjgz .shgjgz-cont .cont-item .item-detail .detail-row .row-val span {
+    margin-right: 0.10667rem;
+  }
+  .shgjgz .shgjgz-cont .cont-item .item-btn {
+    padding-top: 0.4rem;
+  }
+  .shgjgz .shgjgz-cont .cont-item .item-btn a {
+    min-width: 1.86667rem;
+    height: 0.74667rem;
+    line-height: 0.74667rem;
+    margin-right: 0.24rem;
+    font-size: 0.34667rem;
+    border-radius: 0.37333rem;
+  }
+  /* 上海校区招生简章 */
+  .zsjz {
+    padding: 0 0.32rem 0.74667rem;
+    position: relative;
+  }
+  .zsjz .zsjz-cont {
+    margin: 0.4rem 0;
+  }
+  .zsjz .zsjz-cont .cont-detail {
+    width: 6.29333rem;
+    margin: 0.4rem 0;
+    padding: 0.4rem;
+  }
+  .zsjz .zsjz-cont .cont-detail .detail-row {
+    font-size: 0.34667rem;
+    line-height: 0.56rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  .zsjz .zsjz-cont .cont-detail .item-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+  }
+  .zsjz .zsjz-cont .cont-detail .item-btn a {
+    min-width: 3.52rem;
+    height: 0.74667rem;
+    line-height: 0.74667rem;
+    font-size: 0.34667rem;
+    border-radius: 0.37333rem;
+    margin-right: 0.26667rem;
+  }
+  /* 上海国际小学 */
+  .gjxx {
+    width: auto;
+    padding: 0.4rem 0.32rem;
+  }
+  .gjxx .gjxx-cont {
+    padding: 0.4rem 0 0;
+    margin-right: 0;
+  }
+  .gjxx .gjxx-cont .cont-item {
+    width: 4.50667rem;
+    margin-right: 0.34667rem;
+    margin-bottom: 0.4rem;
+  }
+  .gjxx .gjxx-cont .cont-item:nth-of-type(2n) {
+    margin-right: 0;
+  }
+  .gjxx .gjxx-cont .cont-item .item-title {
+    font-size: 0.34667rem;
+    font-weight: bold;
+    line-height: 0.61333rem;
+  }
+  .gjxx .gjxx-cont .cont-item .item-text {
+    font-size: 0.34667rem;
+    line-height: 0.48rem;
+    color: #666666;
+  }
+  .gjxx .gjxx-cont .cont-item .item-enroll {
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+  }
+  /* 热门国际学校 */
+  .rmgjxx {
+    padding: 0 0.32rem;
+  }
+  .rmgjxx .rmgjxx-cont {
+    padding: 0.33333rem 0 0;
+    margin-right: 0;
+  }
+  .rmgjxx .rmgjxx-cont .cont-item {
+    width: 4.50667rem;
+    margin-right: 0.34667rem;
+    margin-bottom: 0.37333rem;
+  }
+  .rmgjxx .rmgjxx-cont .cont-item:nth-of-type(2n) {
+    margin-right: 0;
+  }
+  .rmgjxx .rmgjxx-cont .cont-item .item-detail {
+    height: 3.14667rem;
+  }
+  .rmgjxx .rmgjxx-cont .cont-item .item-detail .detail-title {
+    padding-left: 0.26667rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-size: 0.32rem;
+    line-height: 0.61333rem;
+  }
+  .rmgjxx .rmgjxx-cont .cont-item .item-title {
+    font-size: 0.37333rem;
+    line-height: 0.37333rem;
+    padding: 0.26667rem 0 0.24rem;
+  }
+  .rmgjxx .rmgjxx-cont .cont-item .item-stage {
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+  }
+  /* 国际硕士学位班院校 */
+  .gjss {
+    padding: 0 0.32rem;
+  }
+  .gjss .gjss-cont {
+    padding: 0.4rem 0 0;
+    margin-right: 0;
+  }
+  .gjss .gjss-cont .cont-item {
+    width: 4.50667rem;
+    margin-right: 0.34667rem;
+    margin-bottom: 0.37333rem;
+  }
+  .gjss .gjss-cont .cont-item:nth-of-type(2n) {
+    margin-right: 0;
+  }
+  .gjss .gjss-cont .cont-item .item-title {
+    font-size: 0.37333rem;
+    line-height: 0.37333rem;
+    padding: 0.26667rem 0;
+  }
+  .gjss .gjss-cont .cont-item .item-text {
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+  }
+  .gjss .gjss-cont .cont-item .item-btn {
+    width: 100%;
+    height: 0.74667rem;
+    line-height: 0.74667rem;
+    font-size: 0.34667rem;
+    margin-top: 0.26667rem;
+  }
+  .gjss .gjss-degree .degree-item {
+    width: 4.52rem;
+    margin-right: 0.32rem;
+    margin-bottom: 0.4rem;
+  }
+  .gjss .gjss-degree .degree-item .item-title {
+    height: 1.06667rem;
+    line-height: 1.06667rem;
+    border-radius: 0.16rem 0.16rem 0px 0px;
+    font-size: 0.42667rem;
+  }
+  .gjss .gjss-degree .degree-item .item-title:before {
+    font-size: 0.96rem;
+  }
+  .gjss .gjss-degree .degree-item .item-detail {
+    padding: 0.26667rem;
+    border-radius: 0 0 0.16rem 0.16rem;
+  }
+  .gjss .gjss-degree .degree-item .item-detail .detail-text {
+    font-size: 0.34667rem;
+    line-height: 0.48rem;
+    margin: 0.18667rem 0 0.2rem;
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+  .gjss .gjss-degree .degree-item .item-detail .detail-btn {
+    height: 0.74667rem;
+    line-height: 0.74667rem;
+    font-size: 0.37333rem;
+    border-radius: 0.37333rem;
   }
 }
