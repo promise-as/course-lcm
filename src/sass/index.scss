@@ -1,4 +1,4 @@
-$txt-color: #1473cc;
+//$txt-color: #1473cc;
 $bg-color: #7559e9;
 
 $browser-default-font-size: 75px !default;
@@ -157,9 +157,11 @@ $padding-size:pr(24px);
     .cont-item{
       float: left;
       width: 33.33%;
-      //border: 1px solid red;
       padding: 0 18px;
       box-sizing: border-box;
+      &:hover{
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+      }
       .item-img{
         width: 80px;
         height: 80px;
@@ -184,7 +186,7 @@ $padding-size:pr(24px);
 /* 招生说明 */
 .zssm{
   .zssm-cont{
-    background: url("../images/bg-color.png") repeat-y right;
+    background: url("https://img.thea.cn/public/platform/thea/201910/hbj/kc-mk/images/bg-color.png") repeat-y right;
     margin-top: 30px;
     padding: 20px 0 16px;
     @extend %clearfix;
@@ -439,7 +441,7 @@ $padding-size:pr(24px);
           .row-area{
             color: #888888;
             padding-left: 20px;
-            background: url("../images/icon_1.png") no-repeat left;
+            background: url("https://img.thea.cn/public/platform/thea/201910/hbj/kc-mk/images/icon_1.png") no-repeat left;
           }
           .row-key{
             color: #888888;
@@ -616,7 +618,7 @@ $padding-size:pr(24px);
         .site{
           float: right;
           padding-left: 15px;
-          background: url("../images/icon_2.png") no-repeat left;
+          background: url("https://img.thea.cn/public/platform/thea/201910/hbj/kc-mk/images/icon_2.png") no-repeat left;
         }
       }
     }
@@ -633,7 +635,11 @@ $padding-size:pr(24px);
       width: 230px;
       float: left;
       margin-right: 24px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      &:hover{
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+      }
       .item-detail{
         position: relative;
         height: 160px;
@@ -1205,6 +1211,15 @@ $padding-size:pr(24px);
         .item-enroll{
           font-size: pr(24px);
           line-height: pr(24px);
+          .enroll-stage{
+            width: 78%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow-x: scroll;
+          }
+          .site{
+            padding-left: pr(26px);
+          }
         }
       }
     }
@@ -1218,7 +1233,8 @@ $padding-size:pr(24px);
       .cont-item{
         width: pr(338px);
         margin-right: pr(26px);
-        margin-bottom: pr(28px);
+        margin-bottom: pr(18px);
+        padding-bottom: pr(10px);
         &:nth-of-type(2n){
           margin-right: 0;
         }

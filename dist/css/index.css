@@ -146,6 +146,11 @@
           box-sizing: border-box;
 }
 
+.xxys .xxys-cont .cont-item:hover {
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
 .xxys .xxys-cont .cont-item .item-img {
   width: 80px;
   height: 80px;
@@ -168,7 +173,7 @@
 
 /* 招生说明 */
 .zssm .zssm-cont {
-  background: url("../images/bg-color.png") repeat-y right;
+  background: url("https://img.thea.cn/public/platform/thea/201910/hbj/kc-mk/images/bg-color.png") repeat-y right;
   margin-top: 30px;
   padding: 20px 0 16px;
 }
@@ -436,7 +441,7 @@
 .shgjgz .shgjgz-cont .cont-item .item-detail .detail-row .row-area {
   color: #888888;
   padding-left: 20px;
-  background: url("../images/icon_1.png") no-repeat left;
+  background: url("https://img.thea.cn/public/platform/thea/201910/hbj/kc-mk/images/icon_1.png") no-repeat left;
 }
 
 .shgjgz .shgjgz-cont .cont-item .item-detail .detail-row .row-key {
@@ -614,7 +619,7 @@
 .gjxx .gjxx-cont .cont-item .item-enroll .site {
   float: right;
   padding-left: 15px;
-  background: url("../images/icon_2.png") no-repeat left;
+  background: url("https://img.thea.cn/public/platform/thea/201910/hbj/kc-mk/images/icon_2.png") no-repeat left;
 }
 
 /* 热门国际学校 */
@@ -627,7 +632,13 @@
   width: 230px;
   float: left;
   margin-right: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.rmgjxx .rmgjxx-cont .cont-item:hover {
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 
 .rmgjxx .rmgjxx-cont .cont-item .item-detail {
@@ -1203,6 +1214,15 @@
     font-size: 0.32rem;
     line-height: 0.32rem;
   }
+  .gjxx .gjxx-cont .cont-item .item-enroll .enroll-stage {
+    width: 78%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: scroll;
+  }
+  .gjxx .gjxx-cont .cont-item .item-enroll .site {
+    padding-left: 0.34667rem;
+  }
   /* 热门国际学校 */
   .rmgjxx {
     padding: 0 0.32rem;
@@ -1214,7 +1234,8 @@
   .rmgjxx .rmgjxx-cont .cont-item {
     width: 4.50667rem;
     margin-right: 0.34667rem;
-    margin-bottom: 0.37333rem;
+    margin-bottom: 0.24rem;
+    padding-bottom: 0.13333rem;
   }
   .rmgjxx .rmgjxx-cont .cont-item:nth-of-type(2n) {
     margin-right: 0;
